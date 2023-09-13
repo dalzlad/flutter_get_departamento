@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Material App',
       home: DepartamentoApiGet(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

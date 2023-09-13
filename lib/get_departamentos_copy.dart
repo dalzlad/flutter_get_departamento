@@ -47,9 +47,24 @@ class _DepartamentoApiGetState extends State<DepartamentoApiGet> {
               child: CircularProgressIndicator(),
             )
           : SizedBox(
-            
-            child: Scrollbar(
-               child:ListView.builder(
+            child: Column(
+                children: [
+                  
+                  /*const Padding(
+                    padding: EdgeInsets.all(4.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                       // Text("Valor del dólar"),
+                        Text("Código"),
+                        Text("Nombre"),
+                      ],
+                    ),
+                  ),
+                  */
+          
+          
+                  ListView.builder(
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
@@ -66,7 +81,7 @@ class _DepartamentoApiGetState extends State<DepartamentoApiGet> {
                       );
                       */
                       return SizedBox(
-            width: 80.0,
+            width: 150.0,
             height: 40.0,
             child: Card(child: Text(dataFromAPI!.departamentos[index].nomdepto.toString(),
             )
@@ -77,7 +92,8 @@ class _DepartamentoApiGetState extends State<DepartamentoApiGet> {
                     },
                     itemCount: dataFromAPI!.departamentos.length,
                   ),
-            )
+                ],
+              ),
           ),
     );
   }
